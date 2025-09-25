@@ -41,6 +41,7 @@ pio.renderers.default = "plotly_mimetype+notebook_connected"
 colorway = list(pio.templates["plotly_white"].layout.colorway)
 colorway[0] = "#0a74ff"
 pio.templates["plotly_white"].layout.colorway = tuple(colorway)
+pio.templates["plotly_white"].layout["font"]["family"] = "Serif"
 
 # Constants
 _OPTIMIZATION_DELTA = 1e-7
@@ -336,7 +337,6 @@ class ExtremeValuesAnalysis:
         lambda xi: neg_log_likelihood(xi, exceedence_samples, threshold),
         xi0,
         method="BFGS",
-        bounds=[(-2, -1e-2)],
     )
 
     if not res.success:
