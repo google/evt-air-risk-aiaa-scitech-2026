@@ -197,7 +197,10 @@ class ExtremeValuesAnalysis:
         x="threshold_cpa_neg",
         y="xi_hat",
         error_y="xi_se",
-        labels={"threshold": "Effective Threshold", "xi_hat": "Estimated ξ"},
+        labels={
+            "threshold_cpa_neg": "Effective Threshold (Negative CPA Scale)",
+            "xi_hat": "Estimated ξ",
+        },
         title="Threshold Stability Plot: Estimated ξ vs. Effective Threshold T",
     )
     self.fig_xi_vs_threshold.update_traces(mode="markers+lines")
@@ -210,7 +213,7 @@ class ExtremeValuesAnalysis:
         error_y="error_plus",
         error_y_minus="error_minus",
         labels={
-            "threshold": "Effective Threshold",
+            "threshold_cpa_neg": "Effective Threshold (Negative CPA Scale)",
             "p_collision": "Estimated Collision Probability",
         },
         title=(
