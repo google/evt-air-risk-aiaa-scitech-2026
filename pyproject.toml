@@ -1,0 +1,13 @@
+[project]
+name = "evt-air-risk-aiaa-scitech-2026"
+version = "0.1.0"
+description = "Estimating UAS to Crewed Aircraft Collision Risk Using Extreme Value Theory"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "notebook>=7.4.7",
+    "numpy>=2.3.4",
+    "pandas>=2.3.3",
+    "plotly>=6.3.1",
+    "scipy>=1.16.2",
+]
